@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Store</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <a href="#">
+            <img src="img/logo jumanji.webp" class="logo">
+        </a>
+      
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        <div class="h-icons">
+            <a href="#" id="shopping-bag-icon"><i class='bx bx-shopping-bag'></i></a> <!-- Added ID -->
+            <a href="#"><i class='bx bx-phone'></i></a>
+            <a href="#"><i class='bx bx-heart'></i></a>
+            <div id="cart-indicator">
+                <p>Items in Cart: <span id="cart-count">0</span></p>
+                <p>Total: <span id="cart-total-header">0</span> KZT</p> 
+            </div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+  <!--home section-->
+<section id="home" class="home">
+    <div class="home-text">
+        <h1>Do you looking for something for your pet?</h1>
+        <p>You can find it from us!</p>
+        <a href="#catalog" class="btn" >Let's start shopping!</a>
+    </div>
+</section>
+<!--cart section-->
+<div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-items" id="cart-items"></div>
+    <p>Total: <span id="cart-total-modal">0</span> KZT</p>
+    <button class="close-cart" id="close-cart">Close</button>
+    <button id="clear-cart">
+        <i class="bx bx-trash"></i> Clear Cart
+    </button>
+</div>
+
+<!--Catalog section-->
+<section id="catalog" class="catalog">
+    <div class="center-text">
+        <h2>Catalog</h2>
+    </div>
+    <div class="catalog-menu">
+        <div class="row">
+            <img src="img/cat food1.jpg">
+            <h4>Cat's food-PURINA</h4>
+            <h5>7800kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="1">Add to Cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/cat-3.png">
+            <h4>Cat's food-KOTT</h4>
+            <h5>9000kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="2">Add to Cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/dog food1.jpg">
+            <h4>Dog's food-CHAPPI</h4>
+            <h5>15000kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="3">Add to Cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fish food.jpg">
+            <h4>Fish's food-REPTO CAL</h4>
+            <h5>2200kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="4">Add to Cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/cat food2.jpg">
+            <h4>Cat's food-MONGE</h4>
+            <h5>10900kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="5">Add to Cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/bird food.jpg">
+            <h4>Bird's food-FIORY</h4>
+            <h5>5600kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="6">Add to Cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/rabbit fod.jpg">
+            <h4>Rabbit's food-FIORY</h4>
+            <h5>8100kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="7">Add to Cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/dog food2.jpg">
+            <h4>Dog's food-MONGE</h4>
+            <h5>900kzt</h5>
+            <div class="top">
+                <p>hot</p>
+            </div>
+            <div class="bbtn"> <!-- Removed trailing backslash -->
+                <a href="#" class="bbtn" data-id="8">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--About section-->
+<section id="about" class="about">
+    <div class="container">
+      <div class="img">
+        <img src="img/pets.jpg" alt="Happy Pets" />
+      </div>
+      <div class="text">
+        <h1>Welcome to JUMANJI</h1>
+        <p>Your online store for high-quality pet products!</p>
+        <p>We offer a wide variety of products to meet the needs of your pets:</p>
+        <ul>
+          <li>Healthy food for cats, dogs, birds, and other animals.</li>
+          <li>Accessories and toys for active fun and leisure.</li>
+          <li>Grooming products to take care of your pet's health and appearance.</li>
+        </ul>
+        <p>We are proud to work with the best suppliers and offer you affordable prices and excellent service!</p>
+        <p>Thank you for trusting us with your furry friends!</p>
+      </div>
+    </div>
+  </section>
+<!--Contact section-->
+<section id="contact" class="contact">
+    <div class="contact-box">
+        <h4>Company</h4>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Comments</a></li>
+    </div>
+    <div class="contact-box">
+        <h4>Quick Links</h4>
+        <li><a href="#">Store Location</a></li>
+        <li><a href="#">Order Training</a></li>
+        <li><a href="#">Information</a></li>
+        <li><a href="#">FAQs</a></li>
+    </div>
+    <div class="contact-box">
+        <h4>Jumanji</h4>
+        <h5>Connect with us</h5>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp-square' ></i></a>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
